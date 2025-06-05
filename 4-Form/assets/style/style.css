@@ -1,0 +1,21 @@
+body
+ .container {
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    .form-row {
+      margin-bottom: 20px;
+    }
+
+    .form-row label {
+      display: inline-block;
+      width: 150px;
+    }
+
+    .buttons {
+      text-align: center;
+    }
+body {
+background-color: rgb(89, 214, 173);    
+}
