@@ -11,20 +11,32 @@
     <div class="container">
       <form action="https://httpbin.org/post" method="post">
         <div class="form-row label">
-          <label for="text">Повне імя</label>
-          <input type="text" name="username" value="username" placeholder="" />
+          <label for="username">Повне імя</label>
+          <input
+            type="text"
+            name="username"
+            value="username"
+            placeholder=""
+            id="username"
+          />
         </div>
         <div class="form-row label">
-          <label for="text">Email</label>
-          <input type="email" name="mail" required placeholder="" />
+          <label for="mail">Email</label>
+          <input type="email" name="mail" required placeholder="" id="mail" />
         </div>
         <div class="form-row label">
-          <label for="text">Пароль</label>
-          <input type="password" name="Password" required placeholder="" />
+          <label for="password">Пароль</label>
+          <input
+            type="password"
+            name="Password"
+            required
+            placeholder=""
+            id="password"
+          />
         </div>
         <div class="form-row label">
-          <label for="text">Пароль ще раз</label>
-          <input type="password" name="Password" value="" />
+          <label for="Password">Пароль ще раз</label>
+          <input type="password" name="Password" value="" id="Password" />
         </div>
         <div claas="form-row">
           <span>Стать</span>
@@ -33,11 +45,11 @@
         </div>
         <br />
         <div class="form-row">
-          <label for="text">Вік</label>
-          <input type="text" size="3" name="age" />
+          <label for="Age">Вік</label>
+          <input type="text" size="3" name="age" id="Age" />
         </div>
         <div>
-          <label for="text">Курс</label>
+          <label for="cource">Курс</label>
           <select name="cource" id="cource">
             <option value="">Виберіть курс</option>
             <option>Front end</option>
