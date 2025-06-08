@@ -15,6 +15,7 @@ body {
     font-family: "Open Sans", sans-serif;
     color: #070707;
     font-size: 1.125rem;
+    text-align: center;
 }
 
 .container {
@@ -28,7 +29,6 @@ header .container {
 }
 
 .main-menu ul {
-    text-align: center;
     font-size: 0;
 }
 
@@ -71,7 +71,6 @@ section, footer {
 }
 
 h2 {
-    text-align: center;
     font-size: 2.125rem;
     margin-bottom: 50px;
 }
@@ -88,7 +87,6 @@ h2 {
 }
 
 hgroup {
-    text-align: center;
     margin-bottom: 50px;
 }
 
@@ -102,9 +100,8 @@ hgroup h2 {
 }
 
 .skills-list li {
-    display: inline-blockss;
+    display: inline-block;
     width: 170px;
-    text-align: center;
 }
 
 .skills-list li:not(:last-child) {
@@ -171,23 +168,26 @@ hgroup h2 {
     margin-bottom: 60px;
     font-size: 0;
 }
-.soc-list li:not(:first-child) {
+.soc-list li {
+    display: inline-block;
+}
+.soc-list li:not(:last-child) {
      margin-right: 50px;
 }
 .soc-list a {
     opacity: 0.7;
 }
-.soc-list img {
-    width: 40px;
-}
 .soc-list a:hover {
     opacity: 1;
+}
+.soc-list img {
+    width: 40px;
 }
 footer .container {
     width: 0 10px;
 }
 footer hgroup p {
-    padding: 0 10 px;
+    padding: 0 10px;
 }
 .footer-text {
     color: #828282;
