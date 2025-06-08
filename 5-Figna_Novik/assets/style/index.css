@@ -27,28 +27,30 @@ header .container {
     border-bottom: 1px solid #828282;
 }
 
-.main-many ul {
+.main-menu ul {
     text-align: center;
     font-size: 0;
 }
 
-.main-many ul li {
+.main-menu ul li {
     display: inline-block;
 }
 
-.main-many ul li+li {
+.main-menu ul li+li {
     margin-left: 40px;
 }
 
-.main-many ul li a {
+.main-menu ul li a {
     font-size: 1.125rem;
     color: #828282;
     text-decoration: none;
+    display: inline-block;
 }
 
-.main-many ul li a:hover,
-.main-many ul li a.active {
+.main-menu ul li a:hover,
+.main-menu ul li a.active {
     color: #070707;
+    text-shadow: 1px 0 1px #070707,0 1px 1px #070707,-1px 0 1px #070707, 0 -1px 1px #070707
 }
 
 .first-section {
@@ -95,14 +97,99 @@ hgroup h2 {
 }
 
 .skills-list {
-    font-size: 0;    
+    font-size: 0;
+    margin-left: -1px;  
 }
 
 .skills-list li {
     display: inline-blockss;
     width: 170px;
+    text-align: center;
 }
 
 .skills-list li:not(:last-child) {
     margin-right: 97px;
+}
+.skills-list li img {
+    margin-bottom: 25px;
+}
+.skills-list li .skill-title {
+    color: #828282;
+    letter-spacing: 0.875rem;
+    margin-bottom: 60px;
+    font-weight: 700;
+    padding: 0 30px;
+    min-height: 38px;
+}
+.rating img:not(:last-child) {
+    margin-right: 7px;
+}
+.rating img.grey {
+    opacity: 0.2;
+}
+.portfolio-item:not(:last-child) {
+    margin-bottom: 70px;
+}
+.portfolio-item img {
+    margin-bottom: 40px;
+}
+.portfolio-item div {
+    max-width: 260px;
+    margin-inline: auto;
+}
+.portfolio-item div a {
+    color: #070707;
+}
+.portfolio-item div a:hover {
+    text-decoration: none;
+}
+.btn {
+    display: inline-block;
+    color: #fff;
+    background-color: #070707;
+    line-height: 30px;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 22px;
+    padding: 5px 16px;
+    min-width: 80px;
+    border: 2px solid #070707;
+    font-weight: 700;
+    letter-spacing: 0.1125rem;
+}
+
+.btn:hover {
+    color: #070707;
+    background-color: #fff; 
+}
+.btn-wrap {
+    margin-bottom: 40px;
+}
+.soc-list {
+    margin-bottom: 60px;
+    font-size: 0;
+}
+.soc-list li:not(:first-child) {
+     margin-right: 50px;
+}
+.soc-list a {
+    opacity: 0.7;
+}
+.soc-list img {
+    width: 40px;
+}
+.soc-list a:hover {
+    opacity: 1;
+}
+footer .container {
+    width: 0 10px;
+}
+footer hgroup p {
+    padding: 0 10 px;
+}
+.footer-text {
+    color: #828282;
+    font-size: 0.875rem;
 }
