@@ -147,7 +147,7 @@ p {
 
             &::after {
                 content: '';
-                display: none;
+                display: block;
                 width: calc(100% + 6px);
                 height: 2px;
                 background-color: var(--cheked-text);
