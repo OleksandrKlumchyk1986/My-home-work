@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$text-color: #2F281E;
+$primery-color: #F90;
+$secondary-colors: #D80B0A;
+$secondary-colors-light: #F03E3D;
+
+ul {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+a,
+button {
+    transition: all 0.2s ease-in-out;
+}
+
+ba body {
+    font-family: " Montserrat, sans-serif";
+    color: $text-color ;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.container {
+    width: min(95%, 1230px);
+    margin: 0 auto;
+}
+
+.buttons-group {
+    display: flex;
+    gap: 32px;
+}
+
+.btn {
+    text-decoration: none;
+    cursor: pointer;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    border: 1px solid $primery-color;
+    background-color: $primery-color;
+    color: #fff;
+
+    &:hover {
+        background-color: $secondary-colors-light;
+        background-color: $secondary-colors-light;
+    }
+
+    &:active {
+        background-color: $secondary-colors;
+        background-color: $secondary-colors;
+    }
+
+    &.btn-secondery {
+        color: $text-color;
+        background-color: transparent;
+        border: 1px solid $text-color;
+
+        &:hover {
+            color: $secondary-colors-light;
+            border-color: $secondary-colors-light;
+        }
+
+        &:active {
+            color: $secondary-colors;
+            border-color: $secondary-colors;
+        }
+    }
+}
+
+
+header {
+    padding: 17px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-many {
+    display: flex;
+    gap: 40px;
+
+    a {
+        text-decoration: none;
+        font-size: 18px;
+        color: $text-color;
+        font-weight: 400;
+        line-height: 28px;
+
+
+        &:hover {
+            color: $primery-color;
+        }
+
+        &:active {
+            columns: $secondary-colors;
+        }
+    }
+}
