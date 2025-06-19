@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    color: #FFF;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+body {
+    color: #FFF;
+    border: 25px solid #2B81AC;
+    background: #39C;
+    font-size: 200%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h4 {
+    padding-top: 26PX;
+}
+
+.container {
+    display: block;
+    padding-top: 66px;
+    padding-bottom: 62px;
+    margin: 10px 0 0 135px;
+    flex-shrink: 0;
+}
+
+span {
+    color: #FFF;
+    font-family: "Weather Icons";
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 4px;
+}
+
+.list-cities {
+    list-style: none;
+    font-family: "Lucida Sans Unicode";
+    width: min(90%, 1170px);
+    margin-left: 110px;
+    font-size: 0;
+    text-align: center;
+    border: 2px solid #FFF;
+    background: #FFF;
+    opacity: 0.7;
+
+    li {
+        display: inline-block;
+        font-size: 22px;
+        margin-top: -2px;
+    }
+}
+
+.lisbon {
+    width: 583px;
+    height: 147px;
+    flex-shrink: 0;
+    border: 2px solid #FFF;
+    background: #39C;
+}
+
+
+.paris {
+    width: 291.5px;
+    height: 147px;
+    flex-shrink: 0;
+    border: 2px solid #FFF;
+    background: #3CC;
+}
+
+.belgrade {
+    width: 291.5px;
+    height: 147px;
+    flex-shrink: 0;
+    border: 2px solid #FFF;
+    background: #969;
+}
+
+.venice-purple {
+    width: 291.5px;
+    height: 147px;
+    flex-shrink: 0;
+    border: 2px solid #FFF;
+    background: #C24747;
+}
+
+.tel-avive {
+    width: 291.5px;
+    height: 147px;
+    flex-shrink: 0;
+    border: 2px solid #FFF;
+    background: #E2674A;
+}
+
+.cair {
+    width: 291.5px;
+    height: 147px;
+    flex-shrink: 0;
+    border: 2px solid #FFF;
+    background: #FC6;
+}
+
+.LNew-York {
+    width: 291.5px;
+    height: 147px;
+    flex-shrink: 0;
+    border: 2px solid #FFF;
+    background: #9C9;
+
+}
+
+.new-delhi {
+    width: 291.5px;
+    height: 147px;
+    flex-shrink: 0;
+    border: 2px solid #FFF;
+    background: #699;
+
+}
+
+.san-Francisco {
+    width: 583px;
+    height: 147px;
+    flex-shrink: 0;
+    border: 2px solid #FFF;
+    background: #C69;
+
+}
+
+.tokyo {
+    width: 291.5px;
+    height: 147px;
+    flex-shrink: 0;
+    border: 2px solid #FFF;
+    background: #396;
+}
+
+.sydney {
+    width: 1166px;
+    height: 147px;
+    flex-shrink: 0;
+    border: 2px solid #FFF;
+    background: #669;
+
+}
+
+i {
+    color: rgba(255, 255, 255, 0.70);
+    font-family: "Weather Icons";
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 4px;
+}
+
+.last {
+    text-align: left;
+    font-family: "Lucida Sans Unicode";
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 12px;
+    margin-left: 137px;
+}
