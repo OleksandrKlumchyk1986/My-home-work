@@ -1,16 +1,20 @@
 $text-color: #232323;
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
-a, button {
+a,
+button {
   transition: all .2s ease;
 }
 
@@ -40,7 +44,42 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   main {
     flex-grow: 1;
   }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 колонки */
+  grid-template-rows: repeat(3, 200px);
+  /* 3 рядки по 200px */
+  gap: 10px;
+}
+
+.img1 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.img2 {
+  grid-column: span 2;
+  /* займає 2 колонки */
+  grid-row: span 1;
+  /* і 1 рядок */
+}
+
+.img3 {
+  grid-column: span 1;
+  grid-row: span 2;
+  /* займає 2 рядки */
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
