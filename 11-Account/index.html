@@ -8,6 +8,66 @@
     <link rel="stylesheet" href="assets/css/style.min.css" />
   </head>
   <body>
-    dvdvdvdx
+    <div class="container">
+      <div class="form-row">
+        <h2>Create an Account</h2>
+        <form action="https://httpbin.org/post" method="post">
+          <div class="grid">
+            <div class="form-element">
+              <label for="First Name">First Name</label>
+              <input type="text" name="username" id="username" required />
+            </div>
+            <div class="form-element">
+              <label for="Last Name">Last Name</label>
+              <input type="text" name="lastname" id="lastname" required />
+            </div>
+            <div class="form-element col-2">
+              <label for="mail">E-mail</label>
+              <input
+                type="email"
+                name="mail"
+                required
+                placeholder=""
+                id="mail"
+              />
+              <p>We'll never share your email with anyone else.</p>
+            </div>
+            <div claas="form-element">
+              <div class="radio-group col-2">
+                <label>
+                  <input type="radio" name="gender" checked />Male
+                </label>
+                <label>
+                  <input type="radio" name="gender" value="" />Female
+                </label>
+              </div>
+            </div>
+            <div claas="form-element">
+              <label for="country">Country</label>
+              <select name="Select">
+                <option value="option1">Ukraine</option>
+                <option value="option1">USA</option>
+                <option value="option1">Canada</option>
+              </select>
+            </div>
+            <div class="form-element">
+              <label for="City">City</label>
+              <input type="text" name="lastname" required />
+            </div>
+            <div class="button-wrapper col-2">
+              <button type="submit">Sign Up</button>
+            </div>
+            <div class="text-under col-2">
+              By clicking the 'Sign Up' button, you confirm that you accept our
+              <span>Terms of Use</span> and <span>Privacy Policy</span>
+            </div>
+            <div class="text-account col-2">
+              <p>Have an account?</p>
+              <a href="#">Log In</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
