@@ -45,12 +45,14 @@ h2 {
     font-family: 'Delius Unicase';
     font-size: 36px;
     letter-spacing: 1.8px;
+    margin-bottom: 80px;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
     gap: 30px;
+    padding-bottom: 120px;
 }
 
 .col-2 {
