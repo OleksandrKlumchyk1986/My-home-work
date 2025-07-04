@@ -57,7 +57,7 @@ h2 {
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px 12px;
+    gap: 9px 12px;
 }
 
 .col-2 {
@@ -108,7 +108,7 @@ select {
 }
 
 button {
-    //display: inline-block;
+    display: inline-block;
     background-color: #007BFF;
     color: #FFF;
     text-align: center;
@@ -147,4 +147,83 @@ span {
     align-items: flex-start;
     justify-content: center;
     gap: 20px;
+}
+
+.fake-file {
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #E4E4E4;
+    border-radius: 4px;
+    width: 100%;
+    position: relative;
+
+    .filename {
+        color: #FFF;
+        font-family: Inter;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+    }
+
+    input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        min-width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+}
+
+.main_photo {
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    img {
+        border-radius: 80px;
+    }
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.button_small {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    background-color: #E4E4E4;
+    margin-left: 100%;
+    align-self: flex-start;
+
+}
+
+.form {
+    display: flex;
+    width: 138px;
+    height: 30px;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.button_some_text {
+    color: #969696;
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.1px;
 }

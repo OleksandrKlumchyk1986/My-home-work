@@ -69,5 +69,80 @@
         </form>
       </div>
     </div>
+    <div class="container">
+      <div class="form-row">
+        <h2>Profile</h2>
+        <div class="profile">
+          <div class="main_photo">
+            <img src="assets/image/photo.png" alt="main_photo" />
+          </div>
+          <div class="button-wrapper">
+            <div class="form">
+              <div class="fake-file">
+                <input type="file" id="file-input" />
+              </div>
+              <img src="assets/icon/icon_1.svg" />
+            </div>
+            <button class="button_small">
+              <img src="assets/icon/icon_2.svg" alt="icon_button" />
+            </button>
+            <div class="button_some_text">Up to 1 MB (300x300 px)</div>
+          </div>
+        </div>
+        <form action="https://httpbin.org/post" method="post">
+          <div class="grid">
+            <div class="form-element">
+              <label for="Name">Name</label>
+              <input type="text" name="name" id="name" required />
+            </div>
+            <div class="form-element">
+              <label for="mail">E-mail</label>
+              <input
+                type="email"
+                name="mail"
+                required
+                placeholder=""
+                id="_mail"
+              />
+            </div>
+            <div claas="form-element">
+              <label for="country">Country</label>
+              <select name="Select">
+                <option value="option1">Ukraine</option>
+                <option value="option1">USA</option>
+                <option value="option1">Canada</option>
+              </select>
+            </div>
+            <div class="form-element">
+              <label for="City">City</label>
+              <input type="text" name="lastname" required />
+            </div>
+            <div class="form-element">
+              <label for="zip">Zip Code</label>
+              <input type="text" name="lastname" required />
+            </div>
+            <div class="form-element">
+              <label for="phone">Phone Number</label>
+              <input
+                ttype="tel"
+                id="phone"
+                name="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required
+              />
+            </div>
+            <div class="button-wrapper">
+              <button type="submit">Update</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
+  <script>
+    $(function(){
+      $('input="file"]').on('change', function(e){
+        $('.filename').text(e.target.velue.split('\\').pop())
+      }
+  </script>
 </html>
