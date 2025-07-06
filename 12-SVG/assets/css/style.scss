@@ -15,6 +15,7 @@ $icon-border: #E5EAF4;
 ul,
 ol {
     list-style: none;
+    text-decoration: none;
 }
 
 a,
@@ -37,10 +38,6 @@ body {
     font-family: Roboto;
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 1170px;
-}
 
 header {
     display: flex;
@@ -48,6 +45,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    margin-left: 135px;
 }
 
 .header_logo {
@@ -99,30 +97,125 @@ h3 {
     letter-spacing: 0.2px;
 }
 
-.servis_grid {
+.servis_grid-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    align-items: end;
     margin-bottom: 100px;
 }
 
 .servis_item {
-    border: $icon-border;
+    border: 1px sold transparent;
     border-radius: 8px;
     padding: 40px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        border: 1px solid $icon-social-hover;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 }
-.image-container a {
+
+.wrapper {
+    margin: 0 auto;
+}
+
+section {
+    width: 1170px;
+}
+
+.first_image {
     display: block;
     width: 64px;
     height: 64px;
-    background-image: url('/assets/icon/Vector.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: background-image 0.3s ease-in-out;
+    background-image: url('../icon/Vector.svg');
+    background-size: cover;
+    transition: background-image 0.3s ease;
+    transform: scale(0.5);
+    margin-bottom: 40px;
+
 }
 
-.image-container a:hover {
-    background-image: url('/assets/icon/megaphone-green.svg'); }
+.first_image:hover {
+    background-image: url('../icon/megaphone-green.svg');
+}
+
+.second_image {
+    display: block;
+    width: 68px;
+    height: 64px;
+    background-image: url('../icon/building-blue.svg');
+    background-size: cover;
+    transition: background-image 0.3s ease;
+    transform: scale(0.5);
+    margin-bottom: 40px;
+}
+
+.second_image:hover {
+    background-image: url('../icon/building-green.svg');
+}
+
+.third_image {
+    display: block;
+    width: 68px;
+    height: 100px;
+    background-image: url('../icon/phone-blue.svg');
+    background-size: cover;
+    transition: background-image 0.3s ease;
+    transform: scale(0.5);
+    margin-bottom: 40px;
+}
+
+.third_image:hover {
+    background-image: url('../icon/phone-green.svg');
+}
+
+.footer {
+    width: 100%;
+    padding: 40px;
+    background-color: #16133D;
+}
+
+.footer_logo {
+    padding-bottom: 40px;
+}
+
+.footer_social_list {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_list {
+    display: contents;
+}
 
 
+
+.footer_social_list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    background-color: #EFEEF3;
+    color: #0D0D0D;
+    transition: color 0.3s ease;
+}
+
+.footer_social_list svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    display: block;
+    transition: fill 0.3s ease;
+}
+
+.footer_social_list a:hover {
+    color: $icon-social-hover;
+
+}
