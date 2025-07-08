@@ -37,6 +37,10 @@ body {
     color: $text-color;
     font-family: Roboto;
 }
+.container {
+    width: min(90%, 1440px);
+    margin: 0 auto;
+}
 
 
 header {
