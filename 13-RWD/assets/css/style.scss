@@ -1,5 +1,7 @@
 $text-color: #000;
 
+@import 'hamburger';
+
 *,
 *::before,
 *::after {
@@ -30,16 +32,27 @@ img {
 }
 
 .container {
-    width: min(90%, 1440px);
+    width: min(90%, 1170px);
     margin: 0 auto;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    main {
+        flex-grow: 1;
+    }
 }
 
 .header {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 6.25rem;
     padding: 1.25rem 8.4375rem;
-    z-index: 1000;
     background-color: white;
 }
 
@@ -94,28 +107,26 @@ header .container {
 
 //}
 
-.big_image {
+.hero {
+    background-color: #ddeaf9;
     background-image: url('../img/backgroun\ img.jpg');
     background-position: center center;
-    max-width: 90rem;
-    height: 37.5rem;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 6.25rem;
+    height: calc(100dvh - 100px);
+    min-height: 500px;
+
+    .container {
+        padding-top: 100px;
+    }
 }
 
-.big-image__text {
-    width: 100%;
-    height: 7.5rem;
-    padding-left: 8.25rem;
-    padding-right: 35%;
-
-}
 h1 {
     font-family: "Red Hat Display";
     font-size: 3rem;
-    font-style: normal;
     font-weight: 600;
     line-height: 4rem;
     letter-spacing: 0.15rem;
+    max-width: 770px;
+    padding-top: 100px;
 }
