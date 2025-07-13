@@ -36,13 +36,8 @@
                 </li>
               </ul>
             </nav>
-            <button class="hamburger" type="button">
-              <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-              </span>
-            </button>
             <div class="header_btn" aria-label="Search">
-              <button class="search_btn">
+              <button class="search_btn" type="button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -59,6 +54,15 @@
                 </svg>
               </button>
             </div>
+            <button
+              class="hamburger hamburger--squeeze"
+              type="button"
+              onclick="toggleMenu()"
+            >
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
           </div>
         </div>
       </header>

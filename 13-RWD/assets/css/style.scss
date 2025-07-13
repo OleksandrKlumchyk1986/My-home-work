@@ -1,6 +1,6 @@
 $text-color: #000;
 
-@import 'hamburger';
+@use 'hamburger.scss' as *;
 
 *,
 *::before,
@@ -52,7 +52,7 @@ img {
     left: 0;
     width: 100%;
     height: 6.25rem;
-    padding: 1.25rem 8.4375rem;
+    padding: 2.5rem;
     background-color: white;
 }
 
@@ -60,17 +60,13 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1.5rem;
 
 }
 
-.header_logo {
-    width: 8.86206rem;
+.header_logo img {
+    min-width: 8.86206rem;
     height: 0.75rem;
-
-    img {
-        width: 8.86206rem;
-        height: 0.75rem;
-    }
 
 }
 
@@ -88,9 +84,13 @@ header .container {
     }
 }
 
+.hamburger {
+    display: none;
+}
+
 .header_many nav ul {
     display: flex;
-    gap: 2.625rem;
+    gap: 2.4rem;
     align-items: center;
 }
 
@@ -98,14 +98,12 @@ header .container {
     border: none;
     background-color: none;
     cursor: pointer;
+    scale: 1.1;
 }
-
-//@media screen(max-width: 1440 px) and (min-width: 768px) {
-//  .header {
-//padding: padding: 0.4375rem 0rem;
-//  }
-
-//}
+.header_btn {
+    padding-top: 0;
+    scale: 1.5;
+}
 
 .hero {
     background-color: #ddeaf9;
@@ -129,4 +127,17 @@ h1 {
     letter-spacing: 0.15rem;
     max-width: 770px;
     padding-top: 100px;
+}
+
+@media screen and (max-width: 890px) {
+    .main-many {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .header_btn {
+        padding-top: 0.5rem;
+        scale: 1.5;
+    }
 }
