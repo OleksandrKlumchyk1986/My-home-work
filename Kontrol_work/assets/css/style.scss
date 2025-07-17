@@ -1,6 +1,7 @@
 $text-color: #232323;
 $color-hero: #FFF;
 $color-header: #5373FD;
+$fon-icon: #333;
 
 @use 'fonts.scss' as *;
 
@@ -394,4 +395,63 @@ p {
         position: relative;
         z-index: 1;
     }
+}
+
+
+
+.steps {
+    display: flex;
+    flex-direction: row;
+    background-color: $fon-icon;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    text-align: center;
+    gap: 1.56rem;
+}
+
+.icon_group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 6.65rem 0.05rem;
+    position: relative;
+    text-align: center;
+    gap: 1.56rem;
+
+    .step_iconbox {
+        position: relative;
+
+        &:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            top: -80px; 
+            right: -228%; 
+            width: 270%;
+            height: 100px; 
+            background: url('../img/svg_icon.svg') center no-repeat center;
+            background-size: contain;
+            pointer-events: none;
+        }
+    }
+}
+
+.step_icon {
+    flex: 1;
+    position: relative;
+}
+
+svg {
+    margin-bottom: 1.25rem;
+
+}
+
+h4 {
+    color: $color-hero;
+    font-family: Aleo;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.5rem;
+    text-transform: capitalize;
 }
