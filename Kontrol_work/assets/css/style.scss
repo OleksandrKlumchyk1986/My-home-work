@@ -2,7 +2,7 @@ $text-color: #232323;
 $color-hero: #FFF;
 $color-header: #5373FD;
 $fon-icon: #333;
-
+$color-footer: #000;
 @use 'fonts.scss' as *;
 
 *,
@@ -419,21 +419,7 @@ p {
     text-align: center;
     gap: 1.56rem;
 
-    .step_iconbox {
-        position: relative;
 
-        &:not(:last-child)::after {
-            content: "";
-            position: absolute;
-            top: -80px; 
-            right: -228%; 
-            width: 270%;
-            height: 100px; 
-            background: url('../img/svg_icon.svg') center no-repeat center;
-            background-size: contain;
-            pointer-events: none;
-        }
-    }
 }
 
 .step_icon {
@@ -454,4 +440,177 @@ h4 {
     font-weight: 400;
     line-height: 2.5rem;
     text-transform: capitalize;
+}
+
+.render {
+    background: #ddeaf9 url(../img/rende.webp) center center / cover no-repeat;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.render .why_text.house,
+section.spain .why_text.house {
+
+    background: rgba(35, 35, 35, 0.90);
+    gap: 1rem;
+    padding: 2.75rem 2rem;
+
+}
+
+.render {
+    .why_flex {
+        justify-content: flex-start;
+    }
+}
+
+.spain {
+    background: #ddeaf9 url(../img/spain.webp) center center / cover no-repeat;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.spain {
+    .why_flex {
+        justify-content: flex-end;
+    }
+}
+
+.testimonials {
+    background: #ddeaf9 url(../img/BG.webp) center center / cover no-repeat;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.testimonial {
+    display: flex;
+    gap: 3.75rem;
+    max-width: 82.5rem;
+    height: 17.5rem;
+    justify-content: center;
+    align-items: flex-start;
+
+    .user-pic {
+        flex-shrink: 0;
+    }
+
+    picture,
+    img {
+        width: 27.5rem;
+        height: 17.5rem;
+        object-fit: cover;
+        display: block;
+    }
+
+    .author-story {
+        flex: 1;
+
+        svg {
+            vertical-align: middle;
+            margin-right: 1rem;
+            fill: $color-header;
+        }
+    }
+}
+
+.testimonials {
+    padding: 5rem 0;
+
+    h2 {
+        text-align: center;
+        color: $color-hero;
+        font-family: Aleo;
+        font-size: 2.25rem;
+        font-weight: 400;
+        line-height: 2.5rem;
+        text-transform: capitalize;
+        margin-bottom: 3.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .user-pic {
+            margin-bottom: 1rem;
+
+            picture,
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .author-story p {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+.footer {
+    background: $color-footer;
+    padding: 5rem;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        text-align: center;
+    }
+
+    .footer_logo {
+        a img {
+            width: 10.5rem;
+            height: auto;
+        }
+    }
+
+    .footer_social_list {
+        .footer_list {
+            display: flex;
+            gap: 2rem;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            li {
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 2rem;
+                    height: 2rem;
+
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                        fill: #fff;
+                        transition: fill 0.3s ease;
+                    }
+
+                    &:hover svg {
+                        fill: #5373FD
+                    }
+                }
+            }
+        }
+    }
+
+    .footer_link--linkedin svg {
+        background-color: #5373FD;
+        border-radius: 8px;
+        padding: 0.25rem;
+    }
+}
 }
