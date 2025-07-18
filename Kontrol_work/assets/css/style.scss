@@ -600,17 +600,16 @@ section.spain .why_text.house {
                     }
 
                     &:hover svg {
-                        fill: #5373FD
+                        fill: #5373FD;
                     }
+                }
+
+                &.linkedin a svg {
+                    background-color: #5373FD;
+                    border-radius: 8px;
+                    padding: 0.25rem;
                 }
             }
         }
     }
-
-    .footer_link--linkedin svg {
-        background-color: #5373FD;
-        border-radius: 8px;
-        padding: 0.25rem;
-    }
-}
 }
