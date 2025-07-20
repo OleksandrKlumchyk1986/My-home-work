@@ -3,7 +3,9 @@ $color-hero: #FFF;
 $color-header: #5373FD;
 $fon-icon: #333;
 $color-footer: #000;
+
 @use 'fonts.scss' as *;
+@use 'hamburger.scss' as *;
 
 *,
 *::before,
@@ -43,6 +45,7 @@ body {
     font-size: 1rem;
     color: $text-color;
     font-family: sans-serif;
+    min-width: 576px;
 }
 
 .page-wrapper {
@@ -204,6 +207,71 @@ html {
     scroll-behavior: smooth;
 }
 
+//mpbile mennu//
+
+.overlay {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 7);
+    z-index: 100;
+    transition: all 0.5s ease;
+}
+
+.mobile-menu-panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-width: 100vw;
+    background-color: #fff;
+    transform: translatex(-100%);
+    transition: all .5s ease;
+    z-index: 101;
+
+    .mm-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 20px;
+        background-color: $color-header;
+    }
+}
+
+.open-menu {
+    .overlay {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .mobile-menu-panel {
+        transform: translatex(0);
+    }
+}
+
+.mobile-menu {
+    ul {
+        text-align: center;
+    }
+
+    a {
+        display: inline-block;
+        width: 100%;
+        height: 50px;
+        font-size: 1.5 rem;
+        text-decoration: none;
+        padding: 10px;
+        background-color: $color-header;
+        color: $color-hero;
+    }
+}
+
+
+
+//header//
+
 header {
     height: 100px;
     background-color: $color-header;
@@ -263,6 +331,10 @@ header {
             width: 45px;
         }
     }
+}
+
+.hamburger {
+    display: none;
 }
 
 
@@ -535,27 +607,6 @@ section.spain .why_text.house {
     }
 }
 
-@media (max-width: 768px) {
-    .testimonial {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-
-        .user-pic {
-            margin-bottom: 1rem;
-
-            picture,
-            img {
-                width: 100px;
-                height: 100px;
-            }
-        }
-
-        .author-story p {
-            font-size: 0.9rem;
-        }
-    }
-}
 
 .footer {
     background: $color-footer;
@@ -603,4 +654,130 @@ section.spain .why_text.house {
 
 .footer_social_list .footer_list li a:hover {
     color: #5373FD;
+}
+
+//section why gap 1.5rem//
+@media (max-width: 1024px) {
+    .why_flex {
+        gap: 1.5rem;
+    }
+}
+
+// header flex ai-centr gap 2rem//
+@media (max-width: 768px) {
+    header {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+    }
+}
+
+//section why//
+@media (max-width: 768px) {
+
+    .hero .container form button,
+    .hero .container form input {
+        align-items: stretch;
+    }
+
+    .why_flex {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .why-image {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-top: 3.75rem;
+
+        img {
+            width: calc(49.4% - 0.5rem);
+        }
+    }
+
+    .why_text {
+        align-items: center;
+    }
+
+    .icon_group {
+        padding: 3.75rem 0rem 3.8125rem 0rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 1.5rem;
+        height: 100%;
+
+
+        picture,
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+        }
+
+        .author-story {
+            text-align: start;
+            padding: 0 1rem;
+
+        }
+
+    }
+
+    .testimonials h2 {
+        padding: 3.75rem;
+        margin-bottom: 0;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .search-form .input-wrapper {
+        max-width: 33.75rem;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .why-image {
+        display: inline-block;
+
+        img {
+            width: 16.125rem;
+            height: 10.125rem;
+        }
+    }
+
+    section.render .why_text.house,
+    section.spain .why_text.house {
+        display: grid;
+    }
+
+    .testimonials {
+        display: inline-table;
+    }
+
+    .testimonial img,
+    .testimonial picture {
+        width: 33.75rem;
+        height: 21rem;
+    }
 }
