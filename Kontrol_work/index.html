@@ -9,6 +9,29 @@
 </head>
 
 <body>
+  <div class="overlay"></div>
+  <div class="mobile-menu-panel">
+    <div class="mm-top">
+    <div class="logo">
+      <a href="#"><img src="assets/img/Bhromaon.png" alt="Logo" /></a>
+    </div>
+    <div class="hamburger">
+      <button class="hamburger hamburger--squeeze" type="button" onclick="toggleMenu()">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
+    </div>
+    <nav class="mobile-menu">
+      <ul>
+        <li><a href="#">Bhromaon</a></li>
+        <li><a href="#">Home Page</a></li>
+        <li><a href="#">Special Places</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
   <div class="page-wrapper">
     <section class="hero">
       <div class="container">
@@ -57,6 +80,11 @@
               <li><a href="#">Contact Us</a></li>
             </ul>
           </nav>
+          <button class="hamburger hamburger--squeeze" type="button" onclick="toggleMenu()">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
         </div>
       </div>
     </header>
@@ -79,10 +107,8 @@
             </button>
           </div>
           <div class="why-image">
-            <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-              data-src="assets/img/Image-1.webp" alt="house" />
-            <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-              data-src="assets/img/Image_hero.webp" alt="img_hero" />
+            <img class="lazy" data-src="assets/img/Image-1.webp" alt="house" />
+            <img class="lazy" data-src="assets/img/Image_hero.webp" alt="img_hero" />
           </div>
         </div>
       </div>
@@ -170,8 +196,7 @@
           <div class="user-pic">
             <picture>
               <source srcset="assets/img/ReviewPhoto.webp" type="image/webp" />
-              <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                data-src="assets/img/ReviewPhoto.jpg" alt="human" />
+              <img class="lazy" data-src="assets/img/ReviewPhoto.jpg" alt="human" />
             </picture>
           </div>
           <div class="author-story">
@@ -235,6 +260,9 @@
   <script src="assets/js/lazyload.min.js"></script>
   <script>
     const lazyLoadInstance = new LazyLoad();
+  </script>
+  <script>
+    const toggleMenu = () => document.body.classList.toggle('open-menu')
   </script>
 </body>
 
