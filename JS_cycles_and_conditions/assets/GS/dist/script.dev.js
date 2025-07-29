@@ -66,4 +66,60 @@ function getSymbol() {
 
   var output = document.getElementById("output");
   output.textContent = "Rezult: ".concat(symbol);
+} //====third task=====//
+
+
+var from = Number(prompt("Початок (-10...10):"));
+var to = Number(prompt("Кінець (-10...10):"));
+
+if (from < -10 || to > 10 || from > to) {
+  alert('Введіть правильне значення від -10 до 10');
+} else {
+  var sum = 0;
+  var i = from;
+
+  while (i <= to) {
+    sum += i;
+    i++;
+  }
+
+  alert("\u0421\u0443\u043C\u0430 \u0432\u0456\u0434 ".concat(from, " \u0434\u043E ").concat(to, "= ").concat(sum));
+} //========fourth task====//
+
+
+function gcd(a, b) {
+  while (b != 0) {
+    var r = a % b;
+    a = b;
+    b = r;
+  }
+
+  return a;
+}
+
+var x = Number(prompt("Введіть перше число:"));
+var y = Number(prompt("Введіть друге число:"));
+
+if (isNaN(x) || isNaN(y)) {
+  alert("Введіть цілі числа.");
+} else {
+  alert("НСД = " + gcd(x, y));
+} //======fiftр task===//
+
+
+var j = promt("Ввудіть число");
+a = Number(a);
+
+if (isNaN(a) || j <= 0) {
+  alert('Введіть додатнє число');
+} else {
+  var rezult = "";
+
+  for (var _i = 1; _i <= j; _i++) {
+    if (j % c === 0) {
+      rezult += _i + "";
+    }
+  }
+
+  alert("Дільник числа" + j + ":" + rezult);
 }
