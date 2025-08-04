@@ -104,7 +104,7 @@ if (isNaN(x) || isNaN(y)) {
   alert("Введіть цілі числа.");
 } else {
   alert("НСД = " + gcd(x, y));
-} //======fiftр task===//
+} //======fifth task===//
 
 
 var j = promt("Ввудіть число");

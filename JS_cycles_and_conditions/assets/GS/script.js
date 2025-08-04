@@ -85,7 +85,7 @@ if (isNaN(x) || isNaN(y)) {
 } else {
     alert ("НСД = " + gcd(x, y))
 }
-//======fiftр task===//
+//======fifth task===//
 let j = promt("Ввудіть число")
 a = Number(a);
 if (isNaN(a) || j <= 0) {
