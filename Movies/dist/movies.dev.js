@@ -48,12 +48,22 @@ function showMoviesList(movies) {
   var list = '';
   movies.forEach(function (movie) {
     var poster = movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/300x445?text=No+Image";
-    list += "\n        <div class=\"card m-2\" style=\"width: 18rem;\">\n            <img src=\"".concat(poster, "\" class=\"card-img-top\" alt=\"").concat(movie.Title, "\">\n            <div class=\"card-body\">\n                <h5 class=\"card-title\">").concat(movie.Title, "</h5>\n                <p class=\"card-text\"><b>Year: </b>").concat(movie.Year, "</p>\n                <button class=\"btn btn-primary details-btn\" data-id=\"").concat(movie.imdbID, "\">Detailed</button>\n            </div>\n        </div>\n        ");
+    list += "\n        <div class=\"card m-2\" style=\"width: 18rem;\">\n            <img src=\"".concat(poster, "\" class=\"card-img-top\" alt=\"").concat(movie.Title, "\">\n            <div class=\"card-body\">\n                <h5 class=\"card-title\">").concat(movie.Title, "</h5>\n                <p class=\"card-text\"><b>Year: </b>").concat(movie.Year, "</p>\n                <button class=\"btn btn-primary details-btn\" data-id=\"").concat(movie.imdbID, "\">Detailed</button>\n                 <button class=\"btn btn-warning favorite-btn\" data-id=\"").concat(movie.imdbID, "\" data-title=\"").concat(movie.Title, "\">Add to Favorites</button>\n            </div>\n        </div>\n        ");
   });
   document.getElementById('movies-list').innerHTML = list;
   document.querySelectorAll('.details-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       getMovieDetails(this.dataset.id);
+    });
+  });
+  document.querySelectorAll('.details-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      getMovieDetails(this.dataset.id);
+    });
+  });
+  document.querySelectorAll('.favorite-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      addToFavorites(this.dataset.id, this.dataset.title);
     });
   });
 }
@@ -102,3 +112,20 @@ form.addEventListener('submit', function (e) {
   searchMovie(search, type, year);
 });
 document.getElementById('year').setAttribute('max', new Date().getFullYear());
+
+function addToFavorites(id, title) {
+  var favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+  if (!favorites.some(function (movie) {
+    return movie.id === id;
+  })) {
+    favorites.push({
+      id: id,
+      title: title
+    });
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+    alert("\u2705 ".concat(title, " \u0434\u043E\u0434\u0430\u043D\u043E \u0432 \u0443\u043B\u044E\u0431\u043B\u0435\u043D\u0456!"));
+  } else {
+    alert("\u26A0\uFE0F ".concat(title, " \u0432\u0436\u0435 \u0454 \u0443 \u0441\u043F\u0438\u0441\u043A\u0443 \u0443\u043B\u044E\u0431\u043B\u0435\u043D\u0438\u0445"));
+  }
+}

@@ -26,6 +26,7 @@ function showMoviesList(movies) {
                 <h5 class="card-title">${movie.Title}</h5>
                 <p class="card-text"><b>Year: </b>${movie.Year}</p>
                 <button class="btn btn-primary details-btn" data-id="${movie.imdbID}">Detailed</button>
+                 <button class="btn btn-warning favorite-btn" data-id="${movie.imdbID}" data-title="${movie.Title}">Add to Favorites</button>
             </div>
         </div>
         `
@@ -36,6 +37,18 @@ function showMoviesList(movies) {
     document.querySelectorAll('.details-btn').forEach(btn => {
         btn.addEventListener('click', function () {
             getMovieDetails(this.dataset.id)
+        })
+    })
+    document.querySelectorAll('.details-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            getMovieDetails(this.dataset.id)
+        })
+    })
+
+    
+    document.querySelectorAll('.favorite-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            addToFavorites(this.dataset.id, this.dataset.title)
         })
     })
 }
@@ -83,3 +96,17 @@ form.addEventListener('submit', function (e) {
 })
 
 document.getElementById('year').setAttribute('max', new Date().getFullYear())
+
+function addToFavorites(id, title) {
+    
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || []
+
+   
+    if (!favorites.some(movie => movie.id === id)) {
+        favorites.push({ id, title })
+        localStorage.setItem('favorites', JSON.stringify(favorites))
+        alert(`✅ ${title} додано в улюблені!`)
+    } else {
+        alert(`⚠️ ${title} вже є у списку улюблених`)
+    }
+}
