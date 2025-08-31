@@ -1,0 +1,142 @@
+
+$color-hero: #FFF;
+$color-main:#2C4058;
+$color-button:#000;
+
+@use 'fonts.scss' as *;
+
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a,
+button {
+    transition: all .2s ease;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.header_nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.header_nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header_socials a {
+    margin-left: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+
+.hero {
+    height: 100vh;
+    background: url('../img/maine_photo.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(83, 115, 253, 0.9), rgba(155, 60, 240, 0.9));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.nav-dots {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 2;
+}
+
+.nav-dots span {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: block;
+}
