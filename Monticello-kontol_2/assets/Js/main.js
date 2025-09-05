@@ -15,7 +15,7 @@ $(document).ready(function () {
         slideMargin: 30,
         pager: false,
         controls: false,
-        speed: 800,
+        speed: 700,
         responsive: [
             { breakpoint: 800, settings: { item: 2, slideMove: 1 } },
             { breakpoint: 480, settings: { item: 1, slideMove: 1 } }
