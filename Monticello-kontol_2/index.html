@@ -2,48 +2,70 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/img/Logo.png" type="image/svg+xml" />
   <title>Montichello</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" />
-  <link rel="stylesheet" href="assets/css/style.min.css">
+  <link rel="stylesheet" href="assets/css/hamburgers.min.css">
+  <link rel="stylesheet" href="assets/lightslider/lightslider.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="assets/css/style.min.css" />
 </head>
 
 <body>
+  <div class="container">
   <header class="header">
     <div class="header_logo">
-      <img src="assets/img/Logo.png" alt="Monticello Logo">
+      <a href="#">
+        <img src="assets/img/Logo.png" alt="Monticello Logo" /></a>
     </div>
     <nav class="header_nav">
       <ul>
-        <li class="active"><svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-            <circle cx="4.5" cy="4.5" r="4" stroke="white" />
-          </svg><a href="#">About us</a></li>
-        <li><svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-            <circle cx="4.5" cy="4.5" r="4" stroke="white" />
-          </svg><a href="#">Projects</a></li>
-        <li><svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-            <circle cx="4.5" cy="4.5" r="4" stroke="white" />
-          </svg><a href="#">News</a></li>
-        <li><svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-            <circle cx="4.5" cy="4.5" r="4" stroke="white" />
-          </svg><a href="#">Contact</a></li>
+        <li class="active">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+              <circle cx="4.5" cy="4.5" r="4" stroke="white" />
+            </svg>About us</a>
+        </li>
+        <li>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+              <circle cx="4.5" cy="4.5" r="4" stroke="white" />
+            </svg>Projects</a>
+        </li>
+        <li>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+              <circle cx="4.5" cy="4.5" r="4" stroke="white" />
+            </svg>News</a>
+        </li>
+        <li>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+              <circle cx="4.5" cy="4.5" r="4" stroke="white" />
+            </svg>Contact</a>
+        </li>
       </ul>
     </nav>
+    <button class="hamburger hamburger--spin" id="burger" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
     <div class="header__social">
-  <a href="#" class="social__item"><img src="assets/icon/facebook.png" alt="Facebook"></a>
-  <a href="#" class="social__item"><img src="assets/icon/twitter.png" alt="Twitter"></a>
-  <a href="#" class="social__item"><img src="assets/icon/instagram.png" alt="Instagram"></a>
-</div>
+      <a href="https://www.facebook.com/" class="social__item"><img src="assets/icon/facebook.png" alt="Facebook" /></a>
+      <a href="https://x.com/" class="social__item"><img src="assets/icon/twitter.png" alt="Twitter" /></a>
+      <a href="https://www.instagram.com/" class="social__item"><img src="assets/icon/instagram.png"
+          alt="Instagram" /></a>
+    </div>
   </header>
-
+</div>
   <section class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
-      <h1>SIMPLE & MODERN</h1>
+      <h2>SIMPLE & MODERN</h2>
       <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
     </div>
-
 
     <div class="scroll-down">
       <i class="fas fa-chevron-down"></i>
@@ -58,35 +80,47 @@
   </section>
 
   <section class="what-we-do">
-    <h2>WHAT WE DO</h2>
+    <div class="container">
+      <h2 class="section-title">WHAT WE DO</h2>
 
-
-    <div class="card">
-      <div class="image-wrapper image-left">
-        <img src="assets/img/com_centr.jpg" alt="Trade Center">
+      <div class="work-item">
+        <div class="work-image">
+          <div class="bg-left blue"></div>
+          <img src="assets/img/what 1.png" alt="Trade Center" />
+        </div>
+        <div class="work-content">
+          <h3><span>ONE WORLD</span> TRADE CENTER</h3>
+          <p>
+            Increasing prosperity in our lives can be accomplished by having
+            the right frame of mind. The truth is, our thoughts are very
+            powerful.
+          </p>
+          <a href="#" class="btn-outline">MORE DETAILS</a>
+          <div class="location">
+            <img src="assets/icon/map-marker.svg" alt="marker" /> New York
+            City, United States – 1776 feet
+          </div>
+        </div>
       </div>
-      <div class="content">
-        <h4>ONE WORLD</h4>
-        <h3>TRADE CENTER</h3>
-        <p>Increasing prosperity in our lives can be accomplished by having the right frame of mind.
-          The truth is, our thoughts are very powerful.</p>
-        <a href="#" class="btn">MORE DETAILS</a>
-        <p class="location">📍 New York City, United States - 1776 feet</p>
-      </div>
-    </div>
 
-
-    <div class="card reverse">
-      <div class="image-wrapper image-right">
-        <img src="assets/img/trade_centr.jpg" alt="Commerce Centre">
-      </div>
-      <div class="content">
-        <h4>INTERNATIONAL</h4>
-        <h3>COMMERCE CENTRE</h3>
-        <p>Successful businesses have many things in common, today we'll look at the big 'R' of
-          recognition and how a digital advertising network may help.</p>
-        <a href="#" class="btn">MORE DETAILS</a>
-        <p class="location">📍 Hong Kong - 1588 feet</p>
+      <div class="work-item reverse">
+        <div class="work-image">
+          <div class="bg-right purple"></div>
+          <img src="assets/img/what 2.png" alt="Commerce Centre" />
+        </div>
+        <div class="work-content">
+          <h3><span>INTERNATIONAL</span> COMMERCE CENTRE</h3>
+          <p>
+            Successful businesses have many things in common, today we’ll look
+            at the ‘Big R’ of recognition and how a digital advertising
+            network may help.
+          </p>
+          <a href="#" class="btn-outline">MORE DETAILS</a>
+          <div class="location">
+            <img src="assets/icon/map-marker.svg" alt="marker" /> Hong Kong –
+            1588 feet
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -98,39 +132,47 @@
       <ul id="newsSlider">
         <li>
           <div class="news-card">
-            <img src="assets/img/see the.png" alt="News 1">
+            <img src="assets/img/see the.png" alt="News 1" />
             <div class="news-content">
               <h3>SEE THE UNMATCHED BEAUTY OF THE GREAT.</h3>
-              <p>Free directories: directories are perfect for customers that are searching for…</p>
+              <p>
+                Free directories: directories are perfect for customers that
+                are searching for…
+              </p>
               <div class="author">
-                <img src="assets/img/latest autor 1.png" alt="Alja Brun">
-                <span>ALJA BRUN<br><small>20 Jan 2020</small></span>
+                <img src="assets/img/latest autor 1.png" alt="Alja Brun" />
+                <span>ALJA BRUN<br /><small>20 Jan 2020</small></span>
               </div>
             </div>
           </div>
         </li>
         <li>
           <div class="news-card">
-            <img src="assets/img/effective.png" alt="News 2">
+            <img src="assets/img/effective.png" alt="News 2" />
             <div class="news-content">
               <h3>EFFECTIVE ADVERTISING POINTERS.</h3>
-              <p>Having a home based business is a wonderful asset to your life…</p>
+              <p>
+                Having a home based business is a wonderful asset to your
+                life…
+              </p>
               <div class="author">
-                <img src="assets/img/latest autor 2.png" alt="Dominic Freeman">
-                <span>DOMINIC FREEMAN<br><small>13 Dec 2019</small></span>
+                <img src="assets/img/latest autor 2.png" alt="Dominic Freeman" />
+                <span>DOMINIC FREEMAN<br /><small>13 Dec 2019</small></span>
               </div>
             </div>
           </div>
         </li>
         <li>
           <div class="news-card">
-            <img src="assets/img/hipnotize.png" alt="News 3">
+            <img src="assets/img/hipnotize.png" alt="News 3" />
             <div class="news-content">
               <h3>HYPNOTIZE YOURSELF INTO THE GHOST.</h3>
-              <p>There are many things that are important to catalog design…</p>
+              <p>
+                There are many things that are important to catalog design…
+              </p>
               <div class="author">
-                <img src="assets/img/latest autor 3.png" alt="Alice Ward">
-                <span>ALICE WARD<br><small>30 Nov 2019</small></span>
+                <img src="assets/img/latest autor 3.png" alt="Alice Ward" />
+                <span>ALICE WARD<br /><small>30 Nov 2019</small></span>
               </div>
             </div>
           </div>
@@ -147,7 +189,7 @@
       <h2>GALLERY</h2>
       <div class="gallery_grid">
         <div class="gallery_item big">
-          <img src="assets/img/galery 1 big.png" alt="image 1">
+          <img src="assets/img/galery 1 big.png" alt="image 1" />
           <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70"
               fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -162,24 +204,89 @@
             </svg></span>
         </div>
         <div class="gallery_item">
-          <img src="assets/img/galery 2.png" alt="image 2">
+          <img src="assets/img/galery 2.png" alt="image 2" />
         </div>
         <div class="gallery_item">
-          <img src="assets/img/galery 3.png" alt="image 3">
+          <img src="assets/img/galery 3.png" alt="image 3" />
         </div>
         <div class="gallery_item">
-          <img src="assets/img/galery 4.png" alt="image 4">
+          <img src="assets/img/galery 4.png" alt="image 4" />
         </div>
         <div class="gallery_item">
-          <img src="assets/img/galery 5.png" alt="image 5">
+          <img src="assets/img/galery 5.png" alt="image 5" />
         </div>
       </div>
       <a href="#" class="btn-primery">SEE MORE</a>
     </div>
   </section>
 
+  <section class="contact">
+    <div id="map"></div>
+
+    <div class="contact__form-wrapper">
+      <form class="contact__form">
+        <h2>GET IN TOUCH</h2>
+
+        <div class="form-row">
+          <span class="form-label">
+            <svg class="icon">
+              <use href="assets/icon/sprite.svg#map-marker"></use>
+            </svg>
+            <p class="form_call">91 Nolan Extensions Suite 670</p>
+          </span>
+        </div>
+
+        <label class="form-row">
+          <span class="form-label">
+            <svg class="icon">
+              <use href="assets/icon/sprite.svg#phone"></use>
+            </svg>
+            <p class="form_call">+001 356-868-2454</p>
+          </span>
+          <input type="text" name="fullname" placeholder="Mollie Medina" required />
+        </label>
+
+        <label class="form-row">
+          <span class="form-label">
+            <svg class="icon">
+              <use href="assets/icon/sprite.svg#drawer2"></use>
+            </svg>
+            <p class="form_call">monticello@service.com</p>
+          </span>
+          <input type="email" name="email" placeholder="Email" required />
+        </label>
+
+        <div class="form-row">
+          <span class="form-label">
+            <svg class="icon">
+              <use href="assets/icon/sprite.svg#clock-o"></use>
+            </svg>
+            <p class="form_call">From 07:05AM to 19:30PM</p>
+          </span>
+          <button type="submit">SUBMIT</button>
+        </div>
+      </form>
+    </div>
+
+    <footer class="footer_contact">
+      <div class="header_logo logo">
+        <a href="#">
+          <img src="assets/img/logo.png" alt="Monticello Logo" /></a>
+        <p>Copyrights © 2020 Monticello</p>
+      </div>
+      <div class="header__social">
+        <a href="https://www.facebook.com/" class="social__item"><img src="assets/icon/facebook.png"
+            alt="Facebook" /></a>
+        <a href="https://x.com/" class="social__item"><img src="assets/icon/twitter.png" alt="Twitter" /></a>
+        <a href="https://www.instagram.com/" class="social__item"><img src="assets/icon/instagram.png"
+            alt="Instagram" /></a>
+      </div>
+    </footer>
+  </section>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+  <script src="assets/lightslider/lightslider.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="assets/Js/main.js"></script>
 </body>

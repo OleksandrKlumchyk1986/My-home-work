@@ -39,3 +39,18 @@ $(document).ready(function () {
     slider.goToNextSlide();
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  var lat = 49.411692;
+  var lng = 26.942537;
+  var map = L.map('map').setView([lat, lng], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+  L.marker([lat, lng]).addTo(map).bindPopup("Привіт!!!").openPopup();
+});
+var burger = document.getElementById('burger');
+var nav = document.querySelector('.header_nav');
+burger.addEventListener('click', function () {
+  burger.classList.toggle('is-active');
+  nav.classList.toggle('active');
+});
